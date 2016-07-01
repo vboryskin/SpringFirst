@@ -1,16 +1,23 @@
 package ua.lviv.lgs.entry;
 import javax.persistence.*;
-
+import java.util.List;
 
 
 /**
  * Created by admin on 23.06.2016.
  */
-@
+@Entity
 public class Author {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private int id;
+    @Column
     private String name;
+    @Column
     private String country;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "author")
+    private List<Book> bookList;
 
     public Author(String name, String country) {
         this.name = name;
