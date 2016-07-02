@@ -12,5 +12,6 @@
 </head>
 <body>
 <h1>Hello!</h1>
+<a href="/allUsers">AllUsers</a>
 </body>
 </html>

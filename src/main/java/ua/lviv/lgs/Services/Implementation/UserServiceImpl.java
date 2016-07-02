@@ -3,14 +3,17 @@ package ua.lviv.lgs.Services.Implementation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ua.lviv.lgs.Services.UserService;
 import ua.lviv.lgs.dao.UserDao;
 import ua.lviv.lgs.entry.User;
+
+import java.util.List;
 
 /**
  * Created by admin on 01.07.2016.
  */
 @Service
-public class UserServiceImpl {
+public class UserServiceImpl implements UserService{
 
     @Autowired
     private UserDao userDao;
@@ -21,4 +24,9 @@ public class UserServiceImpl {
         userDao.add(user);
     }
 
+    @Transactional
+    public List<User> findAllUsers() {
+        return userDao.findAllUsers();
+
+    }
 }
