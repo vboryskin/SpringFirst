@@ -1,11 +1,18 @@
 package ua.lviv.lgs.entry;
 
+import org.hibernate.annotations.*;
+
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
 import java.util.List;
 
 /**
  * Created by admin on 30.06.2016.
  */
+//@NamedQuery(name = "User.SelectUserByLogin" query = "select u from User u where u.email like :login or u.phone like :login")
+
 @Entity
 public class User {
 
