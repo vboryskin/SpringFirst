@@ -14,6 +14,9 @@ import java.util.List;
  */
 @Service
 public class UserServiceImpl implements UserService{
+    public User findUserById(int id) {
+        return null;
+    }
 
     @Autowired
     private UserDao userDao;
@@ -29,4 +32,5 @@ public class UserServiceImpl implements UserService{
         return userDao.findAllUsers();
 
     }
+
 }

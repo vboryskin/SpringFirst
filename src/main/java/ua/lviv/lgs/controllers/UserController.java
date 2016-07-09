@@ -4,6 +4,7 @@ package ua.lviv.lgs.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -39,5 +40,9 @@ public class UserController {
         userService.add(name, surname, age, email, userName, password);
         return "redirect:";
     }
-
+    @RequestMapping(value = "/user={id}", method = RequestMethod.GET)
+    private String userInfo(Model model, @PathVariable String id){
+        User user = userService
+        return "";
+    }
 }

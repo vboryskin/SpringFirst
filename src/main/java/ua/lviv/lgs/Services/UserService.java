@@ -11,5 +11,7 @@ public interface UserService {
     void add(String name, String surname, int age, String email, String userName, String password);
     List<User> findAllUsers();
 
+    User findUserById(int id);
+
 
 }
