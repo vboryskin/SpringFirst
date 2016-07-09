@@ -16,24 +16,16 @@
 <h2>All Users here!</h2>
 <table>
     <thead>
-        <th>
+        <tr>
             <td>name</td>
             <td>surname</td>
-            <td>age</td>
-            <td>email</td>
-            <td>userName</td>
-            <td>password</td>
-        </th>
+        </tr>
     </thead>
     <tbody>
         <c:forEach items="&{users}" var="user">
             <tr>
             <td>${user.name}</td>
             <td>${user.surname}</td>
-            <td>${user.age}</td>
-            <td>${user.email}</td>
-            <td>${user.userName}</td>
-            <td>${user.password}</td>
             </tr>
         </c:forEach>
     </tbody>
