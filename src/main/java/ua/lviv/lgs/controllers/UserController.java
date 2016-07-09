@@ -26,5 +26,15 @@ public class UserController {
         model.addAttribute("users", userList);
         return "usersAll";
     }
+    @RequestMapping(value = "userNew", method = RequestMethod.GET)
+    private String userNew(){
+
+        return "newUser";
+
+    }
+    @RequestMapping(value = "createUser", method = RequestMethod.POST)
+    private String createNewUser(){
+        return "";
+    }
 
 }
