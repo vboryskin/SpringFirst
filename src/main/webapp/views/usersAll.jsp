@@ -7,11 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html>
-<head>
-    <title>allUsers</title>
-</head>
-<body>
+
 
 <h2>All Users here!</h2>
 <table>
@@ -43,5 +39,4 @@
 </table>
 <a href="userNew">New User</a>
 
-</body>
-</html>
+
