@@ -15,7 +15,7 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService{
     public User findUserById(int id) {
-        return null;
+        return userDao.findOne(id);
     }
 
     @Autowired

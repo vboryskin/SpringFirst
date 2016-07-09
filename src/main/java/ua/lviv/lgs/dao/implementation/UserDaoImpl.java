@@ -27,4 +27,8 @@ public class UserDaoImpl implements UserDao {
     public List<User> findAllUsers() {
         return entityManager.createQuery("from User").getResultList();
     }
+
+    public  User findOne(int id){
+        return entityManager.find(User.class, id);
+    }
 }

@@ -20,7 +20,7 @@ public interface UserDao
 
 //    User findUserByLogin(@Param("login")String login);
 
-
+    User findOne(int id);
 
 
 

@@ -38,11 +38,12 @@ public class UserController {
     private String createNewUser(@RequestParam("name")String name,@RequestParam("surname")String surname, @RequestParam("age")int age, @RequestParam("email")String email, @RequestParam("userName")String userName, @RequestParam("password")String password){
 
         userService.add(name, surname, age, email, userName, password);
-        return "redirect:";
+        return "redirect:/allUsers";
     }
     @RequestMapping(value = "/user={id}", method = RequestMethod.GET)
     private String userInfo(Model model, @PathVariable String id){
-        User user = userService
-        return "";
+        User user = userService.findUserById(Integer.parseInt(id));
+        model.addAttribute("user", user);
+        return "user-page";
     }
 }

@@ -11,7 +11,8 @@
 
 
 <table>
-    <thead>
+
+
     <tr>
         <td>name</td>
         <td>surname</td>
@@ -20,11 +21,10 @@
         <td>userName</td>
         <td>password</td>
     </tr>
-    </thead>
-    <tbody>
+
     <c:forEach items="${users}" var="user">
         <tr>
-            <td>${user.name}</td>
+            <td><a href="/user=${user.id}">${user.name}</a></td>
             <td>${user.surname}</td>
             <td>${user.age}</td>
             <td>${user.email}</td>
@@ -32,7 +32,7 @@
             <td>${user.password}</td>
         </tr>
     </c:forEach>
-    </tbody>
+
 
 
 
