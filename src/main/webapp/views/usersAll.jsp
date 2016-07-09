@@ -41,6 +41,7 @@
 
 
 </table>
+<a href="userNew">New User</a>
 
 </body>
 </html>

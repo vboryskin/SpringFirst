@@ -14,8 +14,11 @@
     <form method="post" action="/createUser">
         <input type="text" name="name">
         <input type="text" name="surname">
+        <input type="text" name="age">
+        <input type="text" name="email">
+        <input type="text" name="userName">
+        <input type="text" name="password">
         <button value="post">Send</button>
-        <input>
 
     </form>
 

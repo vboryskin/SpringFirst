@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import ua.lviv.lgs.Services.UserService;
 import ua.lviv.lgs.entry.User;
 
@@ -33,8 +34,10 @@ public class UserController {
 
     }
     @RequestMapping(value = "createUser", method = RequestMethod.POST)
-    private String createNewUser(){
-        return "";
+    private String createNewUser(@RequestParam("name")String name,@RequestParam("surname")String surname, @RequestParam("age")int age, @RequestParam("email")String email, @RequestParam("userName")String userName, @RequestParam("password")String password){
+
+        userService.add(name, surname, age, email, userName, password);
+        return "redirect:";
     }
 
 }
