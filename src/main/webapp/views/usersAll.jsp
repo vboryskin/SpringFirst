@@ -9,7 +9,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
-<h2>All Users here!</h2>
+
 <table>
     <thead>
         <tr>

@@ -25,12 +25,12 @@ public class UserController {
     private String usersAll(Model model){
         List<User> userList = userService.findAllUsers();
         model.addAttribute("users", userList);
-        return "usersAll";
+        return "user-all";
     }
     @RequestMapping(value = "userNew", method = RequestMethod.GET)
     private String userNew(){
 
-        return "newUser";
+        return "user-new";
 
     }
     @RequestMapping(value = "createUser", method = RequestMethod.POST)

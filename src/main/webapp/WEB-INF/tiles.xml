@@ -15,14 +15,19 @@
         <put-attribute name="title" value="Home"/>
     </definition>
 
-    <definition name="usersAll" extends="base.definition">
-        <put-attribute name="body" value="/views/usersAll.jsp"/>
-        <put-attribute name="title" value="Users"/>
-    </definition>
+    <!--<definition name="usersAll" extends="base.definition">-->
+        <!--<put-attribute name="body" value="/views/usersAll.jsp"/>-->
+        <!--<put-attribute name="title" value="Users"/>-->
+    <!--</definition>-->
 
-    <definition name="newUser" extends="base.definition">
-        <put-attribute name="body" value="/views/newUser.jsp"/>
-        <put-attribute name="title" value="Users New"/>
+    <!--<definition name="newUser" extends="base.definition">-->
+        <!--<put-attribute name="body" value="/views/newUser.jsp"/>-->
+        <!--<put-attribute name="title" value="Users New"/>-->
+    <!--</definition>-->
+
+    <definition name="user-*" extends="base.definition">
+        <put-attribute name="body" value="/views/{1}.jsp"/>
+        <put-attribute name="title" value="{1}"/>
     </definition>
 
 </tiles-definitions>
