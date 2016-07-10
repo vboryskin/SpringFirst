@@ -17,8 +17,8 @@ public class OrderServiceImpl implements OrderService{
     private OrderDao orderDao;
 
     @Transactional
-    public void add(int orderNumber, int quantity, int sum){
-        Order order = new Order(orderNumber, quantity, sum);
+    public void add(int orderNumber, int quantity, int sum, String addOrderRadio){
+        Order order = new Order(orderNumber, quantity, sum, addOrderRadio);
         orderDao.add(order);
     }
 }

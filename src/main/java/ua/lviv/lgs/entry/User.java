@@ -1,11 +1,14 @@
 package ua.lviv.lgs.entry;
 
 import org.hibernate.annotations.*;
+import sun.util.calendar.LocalGregorianCalendar;
 
 import javax.persistence.*;
 import javax.persistence.Entity;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -32,6 +35,8 @@ public class User {
     private String userName;
     @Column
     private String password;
+//    @Temporal(TemporalType.DATE)
+//    private Date registrationData;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
     private List<Order> orderList;
@@ -41,6 +46,7 @@ public class User {
 
 
     public User() {
+//        this.registrationData = Calendar.getInstance().getTime();
     }
 
     public User(String name, String surname, int age, String email, String userName, String password) {

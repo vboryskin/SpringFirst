@@ -17,7 +17,7 @@ public class ProductServiceImpl implements ProductService{
     private ProductDao productDao;
 
     @Transactional
-    public void add(String name, int price, String specification){
+    public void add(String name, int price, String specification, String id){
         Product product = new Product(name, price, specification);
         productDao.add(product);
     }

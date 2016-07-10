@@ -7,11 +7,11 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div>
-    <p>id: ${user.id}</p>
+    <%--<p>id: ${user.id}</p>--%>
     <p>name: ${user.name}</p>
     <p>surname: ${user.surname}</p>
     <p>age: ${user.age}</p>
     <p>email: ${user.email}</p>
     <p>userName: ${user.userName}</p>
-    <p>password: ${user.password}</p>
+    <%--<p>password: ${user.password}</p>--%>
 </div>
