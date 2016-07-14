@@ -23,7 +23,7 @@ public class OrderController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/addOrder", method = RequestMethod.GET)
+    @RequestMapping(value = "/addNewOrder", method = RequestMethod.GET)
     private String addOrder(Model model){
         List<User> userList = userService.findAllUsers();
         model.addAttribute("users", userList);
@@ -31,14 +31,21 @@ public class OrderController {
     }
 
     @RequestMapping(value = "/addNewOrder", method = RequestMethod.POST)
-    private String createOrder(@RequestParam("orderNumber") int orderNumber,
-                               @RequestParam("quantity") int quantity,
-                               @RequestParam("sum") int sum,
-                               @RequestParam("addOrderRadio") String addOrderRadio){
-        orderService.add(orderNumber, quantity, sum, addOrderRadio);
+    private String createOrder(@RequestParam("orderNumber") String orderNumber,
+                               @RequestParam("quantity") String quantity,
+                               @RequestParam("sum") String sum,
+                               @RequestParam("user") String id){
+        orderService.add(Integer.parseInt(orderNumber),
+                Integer.parseInt(quantity),
+                Integer.parseInt(sum),
+                id);
+        return "redirect:/";
+    }
 
-        return "redirect:/allUsers";
-
+    @RequestMapping(value = "/allOrders", method = RequestMethod.GET)
+    public String allOrders(Model model){
+        model.addAttribute("orders", orderService.findAllOrders());
+        return "order-allOrders";
     }
 
 

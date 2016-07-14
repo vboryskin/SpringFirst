@@ -115,4 +115,17 @@ public class User {
         this.password = password;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "password='" + password + '\'' +
+                ", id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                ", email='" + email + '\'' +
+                ", userName='" + userName + '\'' +
+                '}';
+    }
 }
+

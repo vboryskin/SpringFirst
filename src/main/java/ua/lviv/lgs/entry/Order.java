@@ -5,7 +5,7 @@ import javax.persistence.*;
 /**
  * Created by admin on 30.06.2016.
  */
-@Entity
+@Entity(name="Orders")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,9 +17,9 @@ public class Order {
     private int quantity;
     @Column
     private int sum;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     private User user;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Product product;
 
     public Order() {
@@ -61,5 +61,21 @@ public class Order {
 
     public void setSum(int sum) {
         this.sum = sum;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
     }
 }
