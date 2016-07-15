@@ -8,6 +8,8 @@
         <security:intercept-url pattern="/" access="permitAll"/>
 <security:form-login/>
 <security:logout logout-url="/logout" logout-success-url="/"/>
+        <security:intercept-url pattern="/userNew" access="hasRole('ROLE_ADMIN')"/>
+
 <security:csrf disabled="true"/>
         </security:http>
 
@@ -15,7 +17,9 @@
 <security:authentication-provider>
     <security:user-service>
         <security:user name="admin" password="admin" authorities="ROLE_ADMIN"/>
+        <security:user name="user" password="user" authorities="ROLE_USER"/>
     </security:user-service>
 </security:authentication-provider>
 </security:authentication-manager>
+
         </beans>
