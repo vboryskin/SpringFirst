@@ -13,6 +13,7 @@ import javax.persistence.PersistenceContext;
  */
 @Repository
 public class BrandDaoImpl implements BrandDao {
+
     @PersistenceContext(unitName = "qwerty")
     private EntityManager entityManager;
 
