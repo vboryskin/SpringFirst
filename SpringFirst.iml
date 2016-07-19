@@ -7,7 +7,7 @@
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
           <factory-entry name="noname-persistence.xml@122" />
-          <factory-entry name="qwerty" />
+          <factory-entry name="qwerty" value="e8a4116b-f0b2-4b8b-9b0a-bbf3a656f949" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
       </configuration>

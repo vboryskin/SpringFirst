@@ -22,7 +22,4 @@ public class HomeController {
         model.addAttribute("orders", orderService.findAllOrders());
         return "home";
     }
-
-
-
 }

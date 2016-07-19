@@ -12,6 +12,6 @@ import javax.persistence.PersistenceContext;
 @Repository
 public class CategoriesDaoImpl implements CategoriesDao{
 
-    @PersistenceContext(unitName = "qwerty")
-    private EntityManager entityManager;
+//    @PersistenceContext(unitName = "qwerty")
+//    private EntityManager entityManager;
 }

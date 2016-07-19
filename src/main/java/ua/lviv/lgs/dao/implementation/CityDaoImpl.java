@@ -13,6 +13,7 @@ import javax.persistence.PersistenceContext;
  */
 @Repository
 public class CityDaoImpl implements CityDao {
+
     @PersistenceContext(unitName = "qwerty")
     private EntityManager entityManager;
 

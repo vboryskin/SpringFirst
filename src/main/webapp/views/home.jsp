@@ -22,5 +22,6 @@
 <a href="/allUsers">All Users</a>
 <a href="/allOrders">All Orders</a>
 <a href="/addNewOrder">Add New Order</a>
+<a href="/categories">Choose categories</a>
 
 

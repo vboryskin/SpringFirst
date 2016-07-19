@@ -10,7 +10,7 @@ import ua.lviv.lgs.Services.CategoriesService;
 @Service
 public class CategoriesServiceImpl implements CategoriesService {
 
-    @Autowired
-    private CategoriesService categoriesService;
+//    @Autowired
+//    private CategoriesService categoriesService;
 
 }
